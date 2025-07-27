@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume & Cover Letter Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+    </div>
+    <div class="container">
+        <h1>AI Resume & Cover Letter Generator</h1>
+        <form id="inputForm">
+            <label>Full Name: <input type="text" name="name" required></label>
+            <label>Email: <input type="email" name="email" required></label>
+            <label>Job Role: <input type="text" name="job_role" required></label>
+            <label>Skills: <input type="text" name="skills" placeholder="Comma separated" required></label>
+            <label>Experience: <textarea name="experience" required></textarea></label>
+            <label>Career Goals: <textarea name="goals" required></textarea></label>
+            <label>Profile Picture: <input type="file" name="profile_picture" id="profilePictureInput" accept="image/*"></label>
+            <button type="submit">Generate</button>
+        </form>
+        <div id="output">
+            <h2>Resume</h2>
+            <div id="templateSelector" style="display:none;">
+                <span>Choose a template:</span>
+                <div id="templates">
+                    <!-- Template thumbnails will be inserted here -->
+                </div>
+            </div>
+            <div id="resumePreviewContainer">
+                <pre id="resume"></pre>
+            </div>
+            <button id="downloadResume" style="display:none;">Download Resume (PDF)</button>
+            <h2>Cover Letter</h2>
+            <pre id="coverLetter"></pre>
+            <button id="downloadCover" style="display:none;">Download Cover Letter (PDF)</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
